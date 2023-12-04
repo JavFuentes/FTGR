@@ -1,0 +1,27 @@
+buildscript {
+    ext.kotlin_version = '1.8.10'
+    ext.work_version = '2.6.0'
+    ext.guava_android_version = '27.0.1-android'
+
+    ext.repos = {
+        google()
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.0'
+        classpath 'com.android.tools.build.jetifier:jetifier-core:1.0.0-beta04'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.38.1'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.5.1"
+    }
+    repositories repos
+}
+
+allprojects {
+    repositories repos
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

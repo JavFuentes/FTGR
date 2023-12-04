@@ -1,0 +1,6 @@
+<!-- res/drawable/border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- color del fondo -->
+    <stroke android:width="2dp" android:color="#000000"/> <!-- color y grosor del borde -->
+    <corners android:radius="4dp"/> <!-- redondez de las esquinas -->
+</shape>

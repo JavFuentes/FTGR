@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_small">
+
+    <TextView
+        android:id="@+id/tv_verification"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Verificación"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintEnd_toStartOf="@id/btn_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_image"
+        app:layout_constraintTop_toTopOf="@id/tv_verification"
+        app:layout_constraintBottom_toBottomOf="@id/tv_verification"
+        app:layout_constraintEnd_toStartOf="@id/btn_on"
+        app:layout_constraintStart_toEndOf="@id/tv_verification" />
+
+    <ImageButton
+        android:id="@+id/btn_on"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_btn_on_selector"
+        app:layout_constraintTop_toTopOf="@id/tv_verification"
+        app:layout_constraintBottom_toBottomOf="@id/tv_verification"
+        app:layout_constraintEnd_toStartOf="@id/btn_off"
+        app:layout_constraintStart_toEndOf="@id/btn_image" />
+
+    <ImageButton
+        android:id="@+id/btn_off"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_btn_off_selector"
+        app:layout_constraintTop_toTopOf="@id/tv_verification"
+        app:layout_constraintBottom_toBottomOf="@id/tv_verification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_on" />
+
+    <Spinner
+        android:id="@+id/spinner_symptoms"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:background="@drawable/spinner_background"
+        android:popupBackground="@color/extra_light_gray"
+        android:layout_marginVertical="@dimen/margin_small"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_verification"/>
+
+    <TextView
+        android:id="@+id/tv_symptom_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="ES DE RESOLUCIÓN RÁPIDA"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintTop_toBottomOf="@id/spinner_symptoms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_small" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@id/tv_symptom_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_medium" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

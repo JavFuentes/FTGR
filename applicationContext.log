@@ -1,0 +1,17 @@
+   ______________________________
+ / \                             \.
+|   | This log file was created  |.
+ \_ | by the Wizard, it contains |.
+    | the configuration data     |.
+    | used for the application   |.
+    | generation.                |.
+    |                            |.
+    | It shouldn't be edited     |.
+    | manually, changing it      |.
+    | won't affect the generated |.
+    | sample.                    |.
+    |   _________________________|___
+    |  /                            /.
+    \_/____________________________/.
+
+{"projectName":"FTGR","projectLocation":"C:\\Users\\JavierFuentes\\AndroidStudioProjects\\FTGR","projectNamespace":"cl.abastible.ftgr","accountName":"Bryan","serviceURL":"https://abastible-dev-ftgr-vtgr-mobile.cfapps.us10.hana.ondemand.com/","serverURL":"https://mobile-service-cockpit-web.cfapps.us10.hana.ondemand.com/cockpit/v1/org/b63dcfc8-c1fb-4db4-80a5-6278702385df/space/a24da3ef-b741-4cff-8c6b-2e1d76b18cb3/","applicationID":"vtgr-mobile","applicationSecurityConfig":"SAML","jsonPath":null,"senderID":null,"serverKey":null,"isLogEnabled":false,"isLogUploadEnabled":false,"SAPSDKLocation":"MAVEN_LOCAL","activationType":"appConfigFile","generateJavaCode":false,"generateOnlineApp":true,"isUsageIncluded":false,"isCrashReportIncluded":false,"isMultipleUserMode":false,"isViewBaseFramework":true}

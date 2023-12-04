@@ -1,0 +1,12 @@
+{
+  "__comment": "When modifying this file, you need to reset or reinstall all current client installations",
+  "auth": [{
+        "type": "saml2.web.post",
+        "config": {
+        },
+        "requireOtp": false
+  }],
+  "ServiceUrl" : "https://abastible-dev-ftgr-vtgr-mobile.cfapps.us10.hana.ondemand.com/",
+  "appID": "vtgr-mobile",
+  "multiUser": false
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".app.ui.fragment.LeaksProtocol2Fragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_small">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/margin_medium" />
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@color/extra_light_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_large">
+
+            <!-- Botón de Emergencias -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_emergency"
+                style="?attr/materialButtonStyle"
+                android:layout_width="@dimen/button_medium"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/margin_large"
+                android:backgroundTint="@color/red1"
+                android:text="Emergencias"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:cornerRadius="10dp" />
+
+            <!-- Botón de Continuar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_return"
+                style="?attr/materialButtonStyle"
+                android:layout_width="@dimen/button_medium"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:backgroundTint="@color/enabled_button"
+                android:text="Devolución"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:cornerRadius="10dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

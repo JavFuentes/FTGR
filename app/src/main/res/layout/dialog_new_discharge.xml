@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título del diálogo -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LITROS A DESCARGAR"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp"/>
+
+    <!-- Input para los litros descargados -->
+    <EditText
+        android:id="@+id/et_liters_to_discharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Litros"
+        android:inputType="numberDecimal"/>
+</LinearLayout>

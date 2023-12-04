@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="selected_item">@color/sap_ui_list_picker_select</color>
+    <color name="default_item">@color/sap_ui_background_color</color>
+    <color name="active_item">@color/sap_ui_content_non_interactive_icon_color</color>
+    <color name="red">#FF0000</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="link_text">@color/sap_custom_morning_t4</color>
+    <!-- Avatar background -->
+    <color name="onboarding_avatar_background">@color/colorPrimary</color>
+
+    <!-- Nombres de los colores -->
+    <color name="orange1">#FE5000</color> <!-- Naranja institucional -->
+    <color name="orange2">#FD7B3E</color>
+    <color name="blue1">#003594</color> <!-- Azul institucional -->
+    <color name="blue2">#d7e4f0</color>
+    <color name="blue3">#2a6bac</color>
+    <color name="green1">#78BE20</color> <!-- Verde institucional -->
+    <color name="red1">#b1372e</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="extra_light_gray">#f2f2f2</color>
+    <color name="light_gray">#CACACA</color>
+    <color name="gray">#888B8D</color> <!-- Gris institucional -->
+    <color name="dark_gray">#555555</color>
+    <color name="switch_desactivado">#D3D3D3</color>
+
+    <!-- Colores de componentes -->
+    <color name="toolbar">@color/orange1</color>
+    <color name="enabled_button">@color/orange1</color>
+    <color name="enabled_button3">@color/blue1</color>
+    <color name="disabled_button">@color/orange2</color>
+    <color name="disabled_button3">@color/blue3</color>
+    <color name="divider_color">@color/extra_light_gray</color>
+    <color name="selected_item_recyclerview">#ededed</color>
+    <color name="sync_completed_textview">@color/blue1</color>
+    <color name="clean_button">@color/white</color>
+    <color name="normal_seekbar">@color/blue1</color>
+    <color name="exceeded_seekbar">@color/red1</color>
+    <color name="icon_pressed_color">@color/orange2</color>
+    <color name="icon_default_color">@color/white</color>
+
+    <!-- Colores para grupos de botones -->
+    <color name="default_color_button">@color/extra_light_gray</color>
+    <color name="selected_color_button">@color/blue2</color>
+    <color name="default_color_text">@color/gray</color>
+    <color name="selected_color_text">@color/blue3</color>
+
+    <!-- Colores estados de pedidos -->
+    <color name="pending">#FAFAFA</color>
+    <color name="in_progress">#FAFAFA</color>
+    <color name="completed">#E0F7E0</color>
+    <color name="canceled">#FFECEC</color>
+    <color name="rejected">#FFECEC</color>
+    <color name="delayed">#FFF5E1</color>
+
+    <color name="critical">@color/red1</color>
+    <color name="not_critical">@color/orange2</color>
+    <color name="quick_solution">@color/blue3</color>
+    <color name="inconsequential">#00000000</color>
+</resources>

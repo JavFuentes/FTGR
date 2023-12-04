@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".app.ui.fragment.ReturnFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:textColor="@color/red1"
+            android:textSize="@dimen/margin_medium"
+            android:text="EXISTEN PREGUNTAS CON RESPUESTA NO EN EL CHECKLIST DE 24 PASOS SEGUROS DE ABASTECIMIENTO" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginVertical="@dimen/margin_medium"
+            android:textStyle="bold"
+            android:text="DEBE  PROCEDER  A REALIZAR LA DEVOLUCIÓN DEL PEDIDO" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_return"
+            style="?attr/materialButtonStyle"
+            android:layout_width="@dimen/button_extra_large"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin_extra_large"
+            android:layout_marginTop="34dp"
+            android:backgroundTint="@color/enabled_button"
+            android:text="Devolución"
+            android:textAllCaps="true"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="VTGR_SERVICES">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="PDADevoluciones" EntityType="VTGR_SERVICES.PDADevoluciones"/>
+                <EntitySet Name="PDAEnvioPosicion" EntityType="VTGR_SERVICES.PDAEnvioPosicion"/>
+                <EntitySet Name="PDAPedido" EntityType="VTGR_SERVICES.PDAPedido"/>
+                <EntitySet Name="PDARecibeArchivo" EntityType="VTGR_SERVICES.PDARecibeArchivo"/>
+                <EntitySet Name="PDAInformarpuntuacion" EntityType="VTGR_SERVICES.PDAInformarpuntuacion"/>
+                <EntitySet Name="PDAPedidoConsignacion" EntityType="VTGR_SERVICES.PDAPedidoConsignacion"/>
+                <EntitySet Name="PDAEnRutaCliente" EntityType="VTGR_SERVICES.PDAEnRutaCliente"/>
+                <EntitySet Name="PDACkeckList24" EntityType="VTGR_SERVICES.PDACkeckList24"/>
+                <EntitySet Name="PDACierrePedido" EntityType="VTGR_SERVICES.PDACierrePedido"/>
+                <EntitySet Name="PDAInformeInspeccion" EntityType="VTGR_SERVICES.PDAInformeInspeccion"/>
+                <EntitySet Name="PDACkeckListCamion" EntityType="VTGR_SERVICES.PDACkeckListCamion"/>
+                <EntitySet Name="PDAConfirmaRecepcion" EntityType="VTGR_SERVICES.PDAConfirmaRecepcion"/>
+                <EntitySet Name="PDAActualizaPrecio" EntityType="VTGR_SERVICES.PDAActualizaPrecio"/>
+                <EntitySet Name="PDACreaConsignacion" EntityType="VTGR_SERVICES.PDACreaConsignacion"/>
+            </EntityContainer>
+            <EntityType Name="PDADevoluciones">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="PDAEnvioPosicion">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="CODIGO_TRANSPORTE" Type="Edm.String" MaxLength="50"/>
+                <Property Name="CODIGO_CAMION" Type="Edm.String" MaxLength="50"/>
+                <Property Name="FECHA_HORA" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LONGITUD" Type="Edm.String" MaxLength="20"/>
+                <Property Name="LATITUD" Type="Edm.String" MaxLength="20"/>
+            </EntityType>
+            <EntityType Name="PDAPedido">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="CODIGO_TRANSPORTE" Type="Edm.String" MaxLength="50"/>
+            </EntityType>
+            <EntityType Name="PDARecibeArchivo">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="NOMBRE" Type="Edm.String" MaxLength="255"/>
+                <Property Name="TIPO" Type="Edm.Int32"/>
+                <Property Name="PEDIDO" Type="Edm.String" MaxLength="50"/>
+                <Property Name="URL_ARCHIVO" Type="Edm.String" MaxLength="255"/>
+            </EntityType>
+            <EntityType Name="PDAInformarpuntuacion">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="ID_PUNTUACION_CHOFER" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="PUNTUACION" Type="Edm.Int32"/>
+                <Property Name="FECHA_REGISTRO" Type="Edm.DateTimeOffset" Precision="7"/>
+            </EntityType>
+            <EntityType Name="PDAPedidoConsignacion">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="CODIGO_CONSIGNACION" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="CODIGO_TRANSPORTE" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="ORIGEN" Type="Edm.String" MaxLength="40"/>
+                <Property Name="CERTIFICADO" Type="Edm.String" MaxLength="5000"/>
+                <Property Name="FECHA_CERTIFICADO" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="VOLUMEN" Type="Edm.Decimal" Precision="34"/>
+                <Property Name="GUIAREPARTO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="FECHA_PEDIDO" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="ACTUALIZA_PRECIO" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="PDAEnRutaCliente">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="PEDIDO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="TRANSPORTE" Type="Edm.String" MaxLength="255"/>
+            </EntityType>
+            <EntityType Name="PDACkeckList24">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="ETAPA" Type="Edm.Int32"/>
+                <Property Name="FECHA_HORA" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="TR_CODIGO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="CM_CODIGO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="LATITUD" Type="Edm.String" MaxLength="255"/>
+                <Property Name="LONGITUD" Type="Edm.String" MaxLength="255"/>
+                <Property Name="CHOFER_CODIGO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="OBSERVACIONES" Type="Edm.String" MaxLength="255"/>
+                <Property Name="NUM_PEDIDO" Type="Edm.String" MaxLength="50"/>
+                <Property Name="COD_AYUDANTE" Type="Edm.String" MaxLength="255"/>
+            </EntityType>
+            <EntityType Name="PDACierrePedido">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="PEDIDO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="FECHA" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="OBS_VENTA" Type="Edm.String" MaxLength="100"/>
+                <Property Name="HORA" Type="Edm.TimeOfDay"/>
+                <Property Name="ID_FOTO" Type="Edm.String" MaxLength="100"/>
+                <Property Name="COND_PAGO_CODIGO" Type="Edm.String" MaxLength="10"/>
+                <Property Name="MEDIO_PAGO_CODIGO" Type="Edm.String" MaxLength="10"/>
+                <Property Name="ESTADO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="CODIGO_ENTREGA" Type="Edm.String" MaxLength="10"/>
+                <Property Name="FOLIO" Type="Edm.String" MaxLength="10"/>
+                <Property Name="TOTAL_VENTA" Type="Edm.Decimal" Precision="34"/>
+                <Property Name="ID_SII" Type="Edm.String" MaxLength="100"/>
+                <Property Name="ID_FIRMA" Type="Edm.String" MaxLength="100"/>
+                <Property Name="DOC_NETO" Type="Edm.String" MaxLength="50"/>
+                <Property Name="DOC_IVA" Type="Edm.String" MaxLength="50"/>
+                <Property Name="DOC_TOTAL" Type="Edm.String" MaxLength="50"/>
+                <Property Name="LATITUD" Type="Edm.String" MaxLength="50"/>
+                <Property Name="LONGITUD" Type="Edm.String" MaxLength="50"/>
+                <Property Name="CODIGO_ESTADO_CIERRE" Type="Edm.String" MaxLength="10"/>
+                <Property Name="CODIGO_COND_PAGO" Type="Edm.String" MaxLength="10"/>
+                <Property Name="CODIGO_CLIENTE" Type="Edm.String" MaxLength="20"/>
+                <Property Name="REF_CHOFER" Type="Edm.String" MaxLength="5000"/>
+                <Property Name="FOLIO_NUMERO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="TIPO_DOCUMENTO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="DESCARGA" Type="Collection(VTGR_SERVICES.PDACierrePedido_DESCARGA)" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="PDAInformeInspeccion">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="FECHA_HORA" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="CODIGO_TRANSPORTE" Type="Edm.String" MaxLength="255"/>
+                <Property Name="NUM_PEDIDO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="LATITUD" Type="Edm.String" MaxLength="50"/>
+                <Property Name="LONGITUD" Type="Edm.String" MaxLength="50"/>
+                <Property Name="CODIGO_CHOFER" Type="Edm.String" MaxLength="255"/>
+                <Property Name="OBSERVACIONES" Type="Edm.String" MaxLength="1000"/>
+                <Property Name="COD_AYUDANTE" Type="Edm.String" MaxLength="20"/>
+                <Property Name="FIRMA_CHOFER" Type="Edm.Binary"/>
+                <Property Name="FIRMA_AYUDANTE" Type="Edm.Binary"/>
+                <Property Name="FOTOS" Type="Collection(VTGR_SERVICES.PDAInformeInspeccion_FOTOS)" Nullable="false"/>
+                <Property Name="RES_CHECK" Type="Collection(VTGR_SERVICES.PDAInformeInspeccion_RES_CHECK)" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="PDACkeckListCamion">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="FIRMA_CHOFER" Type="Edm.String" MaxLength="255"/>
+                <Property Name="FIRMA_AYUDANTE" Type="Edm.String" MaxLength="255"/>
+                <Property Name="FECHA_HORA" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="TR_CODIGO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="CM_CODIGO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="LATITUD" Type="Edm.String" MaxLength="50"/>
+                <Property Name="LONGITUD" Type="Edm.String" MaxLength="50"/>
+                <Property Name="SAP_SINTOMA" Type="Edm.String" MaxLength="255"/>
+                <Property Name="CHOFER_CODIGO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="COD_AYUDANTE" Type="Edm.String" MaxLength="255"/>
+                <Property Name="TIPO_CHECK" Type="Edm.String" MaxLength="255"/>
+                <Property Name="OBSERVACIONES" Type="Edm.String" MaxLength="255"/>
+                <Property Name="RES_CHECK" Type="Collection(VTGR_SERVICES.PDACkeckListCamion_RES_CHECK)" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="PDAConfirmaRecepcion">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="TIPO" Type="Edm.String" MaxLength="2"/>
+                <Property Name="CODIGOS" Type="Collection(VTGR_SERVICES.PDAConfirmaRecepcion_CODIGOS)" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="PDAActualizaPrecio">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="FECHA_PRECIO" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="CODIGO_PEDIDO" Type="Edm.String" MaxLength="255"/>
+                <Property Name="CODIGO_TRANSPORTE" Type="Edm.String" MaxLength="255"/>
+            </EntityType>
+            <EntityType Name="PDACreaConsignacion">
+                <Key>
+                    <PropertyRef Name="ID_KEY"/>
+                </Key>
+                <Property Name="ID_KEY" Type="Edm.String" MaxLength="255" Nullable="false"/>
+                <Property Name="CODIGO_TRANSPORTE" Type="Edm.String" MaxLength="255"/>
+                <Property Name="CODIGO_CAMION" Type="Edm.String" MaxLength="255"/>
+                <Property Name="CUENTA_LITROS" Type="Edm.String" MaxLength="11"/>
+                <Property Name="FECHA_CERTIFICADO" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="FECHA_PEDIDO" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="VOLUMEN" Type="Edm.Decimal" Precision="34"/>
+                <Property Name="MEC_MEDICION" Type="Edm.String" MaxLength="11"/>
+                <Property Name="ORIGEN" Type="Edm.String" MaxLength="40"/>
+                <Property Name="VENTEO" Type="Edm.String" MaxLength="11"/>
+            </EntityType>
+            <ComplexType Name="object" OpenType="true"/>
+            <ComplexType Name="PDACierrePedido_DESCARGA">
+                <Property Name="GUIA" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ID_SII" Type="Edm.String" MaxLength="255"/>
+                <Property Name="LITROS_DESCARGADOS" Type="Edm.Decimal" Precision="34"/>
+                <Property Name="PRECIO_UNITARIO" Type="Edm.Decimal" Precision="34"/>
+                <Property Name="SUB_TOTAL" Type="Edm.Decimal" Precision="34"/>
+                <Property Name="LINI" Type="Edm.String" MaxLength="255"/>
+                <Property Name="LFIN" Type="Edm.String" MaxLength="255"/>
+                <Property Name="QR_CODIGO" Type="Edm.String" MaxLength="255"/>
+            </ComplexType>
+            <ComplexType Name="PDAInformeInspeccion_FOTOS">
+                <Property Name="FOTO" Type="Edm.Binary"/>
+                <Property Name="DESCRIPCION" Type="Edm.String" MaxLength="200"/>
+                <Property Name="FECHA_REGISTRO" Type="Edm.DateTimeOffset" Precision="7"/>
+            </ComplexType>
+            <ComplexType Name="PDAInformeInspeccion_RES_CHECK">
+                <Property Name="PREGUNTA" Type="Edm.String" MaxLength="255"/>
+                <Property Name="NUMERO_PREGUNTA" Type="Edm.Int32"/>
+                <Property Name="RESPUESTA" Type="Edm.Int32"/>
+            </ComplexType>
+            <ComplexType Name="PDACkeckListCamion_RES_CHECK">
+                <Property Name="PREGUNTA" Type="Edm.String" MaxLength="255"/>
+                <Property Name="NUMERO_PREGUNTA" Type="Edm.Int32"/>
+                <Property Name="CRITICIDAD" Type="Edm.Int32"/>
+                <Property Name="RESPUESTA" Type="Edm.Int32"/>
+                <Property Name="RPTA_SINTOMAS" Type="Collection(VTGR_SERVICES.PDACkeckListCamion_RES_CHECK_RPTA_SINTOMAS)" Nullable="false"/>
+            </ComplexType>
+            <ComplexType Name="PDACkeckListCamion_RES_CHECK_RPTA_SINTOMAS">
+                <Property Name="SINTOMA" Type="Edm.String" MaxLength="50"/>
+                <Property Name="RESPUESTA_SINTOMAS" Type="Edm.Int32"/>
+            </ComplexType>
+            <ComplexType Name="PDAConfirmaRecepcion_CODIGOS">
+                <Property Name="CODIGO" Type="Edm.String" MaxLength="255"/>
+            </ComplexType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

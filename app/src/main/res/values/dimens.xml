@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- SAP SDK -->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="item_width">350dp</dimen>
+    <dimen name="md_keylines">16dp</dimen>
+
+    <!-- Tamaños de Texto -->
+    <dimen name="text_size_extra_small">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_extra_large">22sp</dimen>
+
+    <!-- Márgenes -->
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_small_medium">12dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_extra_large">36dp</dimen>
+
+    <!-- Alturas de los elementos de la UI -->
+    <dimen name="element_height_small">30dp</dimen>
+    <dimen name="element_height_medium">48dp</dimen>
+    <dimen name="element_height_large">64dp</dimen>
+
+    <!-- Radio de los bordes -->
+    <dimen name="corner_radius_small">8dp</dimen>
+    <dimen name="corner_radius_medium">16dp</dimen>
+    <dimen name="corner_radius_large">24dp</dimen>
+    <dimen name="corner_radius_extra_large">36dp</dimen>
+
+    <!-- Tamaños de Botones -->
+    <dimen name="button_medium">150dp</dimen>
+    <dimen name="button_large">170dp</dimen>
+    <dimen name="button_extra_large">200dp</dimen>
+</resources>

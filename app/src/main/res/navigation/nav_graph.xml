@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_synchronizationFragment"
+            app:destination="@id/synchronizationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_switchUserFragment"
+            app:destination="@id/switchUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/synchronizationFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.SynchronizationFragment"
+        android:label="fragment_synchronization"
+        tools:layout="@layout/fragment_synchronization" >
+        <action
+            android:id="@+id/action_synchronizationFragment_to_truckCheckListFragment"
+            app:destination="@id/truckCheckListFragment" />
+        <action
+            android:id="@+id/action_synchronizationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/truckCheckListFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.TruckCheckListFragment"
+        android:label="fragment_truck_check_list"
+        tools:layout="@layout/fragment_truck_checklist" >
+        <action
+            android:id="@+id/action_truckCheckListFragment_to_consignmentFragment"
+            app:destination="@id/consignmentFragment" />
+        <action
+            android:id="@+id/action_truckCheckListFragment_to_synchronizationFragment"
+            app:destination="@id/synchronizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consignmentFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.ConsignmentFragment"
+        android:label="fragment_consignment"
+        tools:layout="@layout/fragment_consignment" >
+        <action
+            android:id="@+id/action_consignmentFragment_to_truckCheckListFragment"
+            app:destination="@id/truckCheckListFragment" />
+        <action
+            android:id="@+id/action_consignmentFragment_to_printingConsignmentFragment"
+            app:destination="@id/printingConsignmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createdConsignmentFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.CreatedConsignmentFragment"
+        android:label="fragment_created_consignment"
+        tools:layout="@layout/fragment_created_consignment" >
+        <action
+            android:id="@+id/action_createdConsignmentFragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agendaFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.AgendaFragment"
+        android:label="fragment_agenda"
+        tools:layout="@layout/fragment_agenda" >
+        <action
+            android:id="@+id/action_agendaFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+        <action
+            android:id="@+id/action_agendaFragment_to_createdConsignmentFragment"
+            app:destination="@id/createdConsignmentFragment" />
+        <action
+            android:id="@+id/action_agendaFragment_to_completedOrdersFragment"
+            app:destination="@id/completedOrdersFragment" />
+        <action
+            android:id="@+id/action_agendaFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/switchUserFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.SwitchUserFragment"
+        android:label="fragment_switch_user"
+        tools:layout="@layout/fragment_switch_user" >
+        <action
+            android:id="@+id/action_switchUserFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inspectionReportFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.InspectionReportFragment"
+        android:label="fragment_inspection_report"
+        tools:layout="@layout/fragment_inspection_report" >
+        <action
+            android:id="@+id/action_inspectionReportFragment_to_supply2Fragment"
+            app:destination="@id/supply2Fragment" />
+        <action
+            android:id="@+id/action_inspectionReportFragment_to_leaksProtocolFragment"
+            app:destination="@id/leaksProtocolFragment" />
+        <action
+            android:id="@+id/action_inspectionReportFragment_to_returnFragment"
+            app:destination="@id/returnFragment" />
+        <action
+            android:id="@+id/action_inspectionReportFragment_to_imminentDangerFragment"
+            app:destination="@id/imminentDangerFragment" />
+        <action
+            android:id="@+id/action_inspectionReportFragment_to_leaksProtocol2Fragment"
+            app:destination="@id/leaksProtocol2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.OrderDetailFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_detail" >
+        <action
+            android:id="@+id/action_orderDetailFragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+        <action
+            android:id="@+id/action_orderDetailFragment_to_supplyFragment"
+            app:destination="@id/supplyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/supplyFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.SupplyFragment"
+        android:label="fragment_supply"
+        tools:layout="@layout/fragment_supply" >
+        <action
+            android:id="@+id/action_supplyFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+        <action
+            android:id="@+id/action_supplyFragment_to_leaksProtocolFragment"
+            app:destination="@id/leaksProtocolFragment" />
+        <action
+            android:id="@+id/action_supplyFragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/supply2Fragment"
+        android:name="cl.becloud.vtgr.ui.fragment.Supply2Fragment"
+        android:label="fragment_supply2"
+        tools:layout="@layout/fragment_supply2" >
+        <action
+            android:id="@+id/action_supply2Fragment_to_orderDetail2Fragment"
+            app:destination="@id/orderDetail2Fragment" />
+        <action
+            android:id="@+id/action_supply2Fragment_to_inspectionReportFragment"
+            app:destination="@id/inspectionReportFragment" />
+        <action
+            android:id="@+id/action_supply2Fragment_to_returnFragment"
+            app:destination="@id/returnFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/supply3Fragment"
+        android:name="cl.becloud.vtgr.ui.fragment.Supply3Fragment"
+        android:label="fragment_supply3"
+        tools:layout="@layout/fragment_supply3" >
+        <action
+            android:id="@+id/action_supply3Fragment_to_orderDetail2Fragment"
+            app:destination="@id/orderDetail2Fragment" />
+        <action
+            android:id="@+id/action_supply3Fragment_to_orderDetail3Fragment"
+            app:destination="@id/orderDetail3Fragment" />
+        <action
+            android:id="@+id/action_supply3Fragment_to_returnFragment"
+            app:destination="@id/returnFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetail2Fragment"
+        android:name="cl.becloud.vtgr.ui.fragment.OrderDetail2Fragment"
+        android:label="fragment_order_detail2"
+        tools:layout="@layout/fragment_order_detail2" >
+        <action
+            android:id="@+id/action_orderDetail2Fragment_to_supply3Fragment"
+            app:destination="@id/supply3Fragment" />
+        <action
+            android:id="@+id/action_orderDetail2Fragment_to_supply2Fragment"
+            app:destination="@id/supply2Fragment" />
+        <action
+            android:id="@+id/action_orderDetail2Fragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/salesConfirmationFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.SalesConfirmationFragment"
+        android:label="fragment_sales_confirmation"
+        tools:layout="@layout/fragment_sales_confirmation" >
+        <action
+            android:id="@+id/action_salesConfirmationFragment_to_generatedDocumentFragment"
+            app:destination="@id/generatedDocumentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedOrdersFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.CompletedOrdersFragment"
+        android:label="fragment_completed_orders"
+        tools:layout="@layout/fragment_completed_orders" >
+        <action
+            android:id="@+id/action_completedOrdersFragment_to_routeClosureFragment"
+            app:destination="@id/routeClosureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generatedDocumentFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.GeneratedDocumentFragment"
+        android:label="fragment_generated_document"
+        tools:layout="@layout/fragment_generated_document" >
+        <action
+            android:id="@+id/action_generatedDocumentFragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeClosureFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.RouteClosureFragment"
+        android:label="fragment_route_closure"
+        tools:layout="@layout/fragment_route_closure" >
+        <action
+            android:id="@+id/action_routeClosureFragment_to_routeClosure2Fragment"
+            app:destination="@id/routeClosure2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeClosure2Fragment"
+        android:name="cl.becloud.vtgr.ui.fragment.RouteClosure2Fragment"
+        android:label="fragment_route_closure2"
+        tools:layout="@layout/fragment_route_closure2" >
+        <action
+            android:id="@+id/action_routeClosure2Fragment_to_routeClosureFragment"
+            app:destination="@id/routeClosureFragment" />
+        <action
+            android:id="@+id/action_routeClosure2Fragment_to_completedRouteClosureFragment"
+            app:destination="@id/completedRouteClosureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedRouteClosureFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.CompletedRouteClosureFragment"
+        android:label="fragment_completed_route_closure"
+        tools:layout="@layout/fragment_completed_route_closure" >
+        <action
+            android:id="@+id/action_completedRouteClosureFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetail3Fragment"
+        android:name="cl.becloud.vtgr.ui.fragment.OrderDetail3Fragment"
+        android:label="fragment_order_detail3"
+        tools:layout="@layout/fragment_order_detail3" >
+        <action
+            android:id="@+id/action_orderDetail3Fragment_to_salesConfirmationFragment"
+            app:destination="@id/salesConfirmationFragment" />
+        <action
+            android:id="@+id/action_orderDetail3Fragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaksProtocolFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.LeaksProtocolFragment"
+        android:label="fragment_leaks_protocol"
+        tools:layout="@layout/fragment_leaks_protocol" >
+        <action
+            android:id="@+id/action_leaksProtocolFragment_to_supplyFragment"
+            app:destination="@id/supplyFragment" />
+        <action
+            android:id="@+id/action_leaksProtocolFragment_to_inspectionReportFragment"
+            app:destination="@id/inspectionReportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/printingConsignmentFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.PrintingConsignmentFragment"
+        android:label="fragment_printing_consignment"
+        tools:layout="@layout/fragment_printing_consignment" >
+        <action
+            android:id="@+id/action_printingConsignmentFragment_to_createdConsignmentFragment"
+            app:destination="@id/createdConsignmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/returnFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.ReturnFragment"
+        android:label="fragment_return"
+        tools:layout="@layout/fragment_return" >
+        <action
+            android:id="@+id/action_returnFragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imminentDangerFragment"
+        android:name="cl.becloud.vtgr.ui.fragment.ImminentDangerFragment"
+        android:label="fragment_imminent_danger"
+        tools:layout="@layout/fragment_imminent_danger" >
+        <action
+            android:id="@+id/action_imminentDangerFragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaksProtocol2Fragment"
+        android:name="cl.becloud.vtgr.ui.fragment.LeaksProtocol2Fragment"
+        android:label="fragment_leaks_protocol2"
+        tools:layout="@layout/fragment_leaks_protocol2" >
+        <action
+            android:id="@+id/action_leaksProtocol2Fragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,24 @@
+<resources  xmlns:tools="http://schemas.android.com/tools"
+             tools:ignore="MissingTranslation" >
+    <string name="application_name">FTGR</string>
+
+    <!-- Image Contents -->
+    <string name="title_dialog_descriptive_image">Ningún elemento seleccionado</string>
+    <string name="message_dialog_descriptive_image">Selecciona un elemento para ver una imagen descriptiva del paso de verificación.</string>
+    <string name="positive_button_dialog_descriptive_image">Entendido</string>
+    <string name="ic_edit">Editar</string>
+    <string name="ic_delete">Eliminar</string>
+
+    <!-- Cancel Orders Dialog -->
+    <string-array name="return_types">
+        <item>Camión en panne</item>
+        <item>Camión sin gas</item>
+        <item>Turno terminado</item>
+    </string-array>
+
+    <string name="critical_message">SE DEBE ACERCAR AL JEFE DE LA OFICINA DE DISTRIBUCIÓN O ENCARGADO DE FLOTA</string>
+    <string name="not_critical_message">EL PROBLEMA DEBERÁ SER RESUELTO PARA EL PRÓXIMO DE TRANSPORTE</string>
+    <string name="quick_solution_message">ES DE SOLUCIÓN RÁPIDA</string>
+    <string name="inconsequential_message"></string> <!-- Cadena vacía -->
+
+</resources>
